@@ -11,7 +11,10 @@ class Shoe:
         return self._brand
     @brand.setter
     def brand(self, brand):
-        self._brand = brand    
+        if isinstance(brand, str):
+            self._brand = brand
+        else:
+            print("brand must be a string") 
     @property
     def size(self):
         return self._size
